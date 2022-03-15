@@ -7,17 +7,6 @@ pipeline {
   agent {
     dockerfile true
   }
-  stages {
-    stage('Test App') {
-      steps {
-        sh '/usr/local/bin/python3 /app/test.py'
-      }
-      post {
-        always {
-          junit 'test-reports/*.xml'
-        }
-      } 
-    }
     stage('Build image') {
       steps{
         script {
