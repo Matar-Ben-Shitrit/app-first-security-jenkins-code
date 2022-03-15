@@ -7,6 +7,7 @@ pipeline {
   agent {
     dockerfile true
   }
+  stages {
     stage('Build image') {
       steps{
         script {
@@ -28,4 +29,5 @@ pipeline {
         sh "docker rmi $registry:$BUILD_NUMBER"
       }
     }
+  }
 }
