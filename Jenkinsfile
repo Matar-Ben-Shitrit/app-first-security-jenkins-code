@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "<your-docker-hub-id>/my-cicd-app"
+    registry = "/matarbsh/my-cicd-app"
     registryCredential = 'dockerhub'
     dockerImage = ''
   }
