@@ -10,7 +10,7 @@ pipeline {
   stages {
     stage('Test App') {
       steps {
-        sh 'python3 test.py'
+        sh '/usr/local/bin/python3 /app/test.py'
       }
       post {
         always {
