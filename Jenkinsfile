@@ -6,7 +6,6 @@ pipeline {
   }
   agent {
     dockerfile true
-    args "-u root"
   }
   stages {
     stage('Build image') {
